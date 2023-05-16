@@ -1,0 +1,129 @@
+@charset "utf-8";
+*{
+    margin: 0 auto;
+}
+img{
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+}
+.bg-1{
+    width: 300px;
+    margin: 0 auto;
+    /* background-color: beige; */
+    position: relative;
+}
+h1{
+    text-align: center;
+}
+.img2{
+    position: absolute;
+    top: 0 ;
+    left: 0;
+    /* display적용시 */
+    /* display: none; */
+    opacity: 0;
+    transition: opacity 0.5s linear;/*느리게변환*/
+}
+.bg-1:hover .img2{
+    display: block;
+    opacity: 1;
+}
+
+.bg-2{
+    position: relative;
+    margin: 0 auto;
+    width: 300px;
+}
+.img4{
+    position:absolute;
+    top:0;
+    left: 0;
+    display: none;
+}
+.bg-2:hover .img4{
+    display: block;
+    opacity: 0.5;
+}
+
+/* 배경이미지 hover */
+.back{
+    width: 300px;
+    height: 400px;
+    background-image: url(https://i.pinimg.com/564x/3b/3e/e0/3b3ee08f171c86df773e6cca4bce487a.jpg);
+    background-size:100% 100%;
+    background-position: center;
+    margin: 0 auto;
+}
+.back:hover{
+    background-image: url(https://i.pinimg.com/564x/b5/81/c1/b581c16400d43665c8eccf5da069bb84.jpg);
+}
+
+/* hover 확대 */
+ul{
+    list-style: none;
+}
+.gallery{
+    width: 1000px;
+    margin: 30px auto;
+    height: 500px;
+}
+.gallery h3{
+    text-align: center;
+}
+.gallery li{
+    width: 280px;
+    float: left;
+    height: 500px;
+    margin-right:20px;
+}
+.gallery img{
+    transition: 0.3s;
+}
+.gallery a:hover img{
+    transform: scale(1.2);
+    opacity: 0.5;
+}
+.gallery a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.wrapper{
+    margin-top: 100px auto;
+    width: 600px;
+    height: 400px;
+    background-color: rgb(28, 4, 51);
+}
+.box{
+    padding: 50px;
+}
+.box p{
+    color: #aaaa;
+    margin-bottom: 10px;
+}
+.box p:hover{
+    color: white;
+}
+.box span{
+    font-weight: 900;
+    color: #fff;
+    position: relative;
+}
+.box span::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 5px;
+    background-color: aquamarine;
+    position: absolute;
+    left:0;
+    bottom: 0px;
+    background: rgba(200,125,220,0.6);
+}
+.box p:hover span::after{
+    width: 100%;
+    transition: width 0.3s;
+}
